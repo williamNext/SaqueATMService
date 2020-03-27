@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.compasso.caixa.controller.dto.SaqueDTO;
 import br.com.compasso.caixa.form.SaqueForm;
 import br.com.compasso.caixa.service.SaqueCaixaEletronicoService;
-import javassist.tools.web.BadHttpRequest;
 
 @RestController()
 @RequestMapping("/caixa")
