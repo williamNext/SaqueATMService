@@ -11,7 +11,15 @@ import br.com.compasso.caixa.config.validation.annotations.DivisibleBy;
 public class SaqueForm {
 	
 	@NotNull @DecimalMin("10.0") @DivisibleBy(divisor = 10) 
-	BigDecimal valorDeSaque;
+	private BigDecimal valorDeSaque;
+	
+	
+	public SaqueForm() {
+	}
+	
+	public SaqueForm(@NotNull @DecimalMin("10.0") BigDecimal valorDeSaque) {
+		this.valorDeSaque = valorDeSaque;
+	}
 
 	public BigDecimal getValorDeSaque() {
 		return valorDeSaque;
@@ -20,6 +28,5 @@ public class SaqueForm {
 	public void setValorDeSaque(BigDecimal valorDeSaque) {
 		this.valorDeSaque = valorDeSaque;
 	}
-
 	
 }

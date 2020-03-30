@@ -38,7 +38,7 @@ public class CaixaEletronicoController {
 	@GetMapping
 	@ResponseBody
 	public String rello() {
-		return "teste de get";
+		return "hello";
 	}
 		
 

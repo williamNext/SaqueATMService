@@ -14,11 +14,11 @@ public class SaqueCaixaEletronicoService {
 
 	public Optional<SaqueDTO> getMapaDeNotas(SaqueForm saqueForm) {
 		CaixaEletronico caixaEletronico = new CaixaEletronico();
-		Map<String, Integer> notas = caixaEletronico.CalculaNotasDoSaque(saqueForm.getValorDeSaque());
+		Map<String, Integer> notas = caixaEletronico.CalculaNotasDoSaque(saqueForm);
 		
 		SaqueDTO saqueDTO = new SaqueDTO(notas);
-		
-		return Optional.of(saqueDTO);
+
+		return Optional.ofNullable(saqueDTO);
 	}
 
 }
