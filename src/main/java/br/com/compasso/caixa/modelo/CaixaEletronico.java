@@ -23,7 +23,7 @@ public class CaixaEletronico {
 	public Map<String, Integer> CalculaNotasDoSaque(BigDecimal valor) {
 		Integer removerFilter = 0, indexCounter = 0, quantidadeDaNota = 0;
 
-		int valorDoSaque = valor.intValue();
+		Integer valorDoSaque = valor.intValue();
 
 		do {
 			if (valorDoSaque >= listaDeNotas.get(indexCounter)) {

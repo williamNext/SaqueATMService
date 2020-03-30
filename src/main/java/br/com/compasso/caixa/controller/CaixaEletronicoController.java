@@ -26,13 +26,13 @@ public class CaixaEletronicoController {
 	
 	@PostMapping
 	public ResponseEntity<Optional<SaqueDTO>> sacar(@RequestBody @Valid SaqueForm formularioDeSaque) {
-		Optional<SaqueDTO> mapaDeNotas = saqueService.getMapaDeNotas(formularioDeSaque);
+		Optional<SaqueDTO> saqueDto = saqueService.getMapaDeNotas(formularioDeSaque);
 	
-		if (mapaDeNotas.isPresent()) {
-			return ResponseEntity.ok(mapaDeNotas);
+		if (saqueDto.isPresent()) {
+			return ResponseEntity.ok(saqueDto);
 		}
 		
-		return ResponseEntity.badRequest().build();		
+		return ResponseEntity.notFound().build();		
 	}
 	
 	@GetMapping
