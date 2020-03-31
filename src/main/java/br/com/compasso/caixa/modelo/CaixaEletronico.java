@@ -21,7 +21,7 @@ public class CaixaEletronico {
 		notasDoSaque = new LinkedHashMap<String, Integer>();
 	}
 
-	public Map<String, Integer> CalculaNotasDoSaque(SaqueForm formularioDeSaque) {
+	public Map<String, Integer> calculaNotasDoSaque(SaqueForm formularioDeSaque) {
 		Integer removerFilter = 0, indexCounter = 0, quantidadeDaNota = 0;
 
 		Integer valorDoSaque = formularioDeSaque.getValorDeSaque().intValue();
